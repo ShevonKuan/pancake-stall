@@ -49,7 +49,6 @@ func main() {
 				// Use tmpFile.Name() as the SQLite database path
 				sqlLitePath = tmpFile.Name()
 			}
-
 			o := pancake.StallPancake(
 				xLength, yLength, sqlLitePath, startW, enableSplit, resultCounts, trialCounts, enableLog, poetryCounts,
 			)

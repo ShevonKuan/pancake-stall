@@ -22,11 +22,11 @@ func StallPancake(
 	poetryCounts int, // 注入诗句条数 小于等于0 则表示填入至满只用trialCounts终止条件
 ) *Canvas {
 	// 启动数据库
-	db, _ := sql.Open("sqlite3", "poetry.db")
+	db, _ := sql.Open("sqlite3", sqlLitePath)
 	canvas := NewCanvas(xLength, yLength)
 	// 写入第一个字
 	canvas.Input(PoetryInput{canvas.GetCenterCoordinate(): []rune(startW)[0]})
-	log.Println("开始摊煎饼")
+	log.Println("使用数据库" + sqlLitePath + "开始摊煎饼")
 	// 开始摊煎饼
 	trial := 0 // 寻找注入位置次数
 	counter := 0

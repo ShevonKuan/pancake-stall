@@ -72,10 +72,9 @@ def sj(path):
 
 def remove_symbols(text):
     # 使用正则表达式去除非中文字符
-    cleaned_text = re.sub(r'[^\u4e00-\u9fff\s]', '', text)
+    pattern = r"[^\u4e00-\u9fa5 ]"  # 匹配非中文汉字字符和非空格字符
 
-    # 去除多余的空白字符
-    cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
+    cleaned_text = re.sub(pattern, "", text)
 
     return cleaned_text
 
