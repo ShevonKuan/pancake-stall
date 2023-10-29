@@ -1,0 +1,11 @@
+.vscode/
+.VSCodeCounter/
+*.aux
+*.log
+*.db
+README.html
+*.tex
+*.exe
+output.pdf
+*.synctex.gz
+PoetryCategory.json
